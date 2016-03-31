@@ -3,6 +3,7 @@
   "version": "0.2.1",
   "description": "A simple React Redux modal implementation",
   "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
   "directories": {
     "example": "example"
   },
