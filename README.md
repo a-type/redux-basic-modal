@@ -35,7 +35,7 @@ class HelloModal extends Component {
     }
 }
 
-export default connectModal(HelloModal);
+export default connectModal(HelloModal, 'HelloModal');
 ```
 
 Render all your modals in one place in your app with the exposed `Modals` component.
@@ -56,7 +56,7 @@ export default class App extends Component {
 }
 ```
 
-Use the exposed `ShowModal` component to quickly create a show button. Pass the display name of the modal component you passed into `connectModal` as `modalName`.
+Use the exposed `ShowModal` component to quickly create a show button. Pass the name of the modal component you passed into `connectModal` as `modalName`.
 
 ```jsx
 import { ShowModal } from 'redux-basic-modal';
@@ -64,7 +64,7 @@ import { ShowModal } from 'redux-basic-modal';
 <ShowModal modalName='HelloModal'>Show</ShowModal>
 ```
 
-Trigger show and hide actions manually with the exposed actions, passing the display name of the modal component you passed into `connectModal`.
+Trigger show and hide actions manually with the exposed actions, passing the name of the modal component you passed into `connectModal`.
 
 ```javascript
 import { showModal, hideModal } from 'redux-basic-modal';
@@ -93,7 +93,7 @@ Action creators for showing and hiding modals. Exposes `showModal(modalName)` an
 
 ### `connectModal`
 
-Connects a modal component with the appropriate functions and state. Wrap your modal components: `connectModal(MyModal)`.
+Connects a modal component with the appropriate functions and state. Wrap your modal components, passing the component and a name to use to control it with actions: `connectModal(MyModal, "MyModal")`.
 
 This will pass some properties to your modal:
 
@@ -128,7 +128,6 @@ A basic connected component which can wrap any element to show a modal on click.
 
 * Testing!
 * Allow passing arbitrary properties into a modal's state, then pass those properties to the modal component.
-* Allow defining a custom name for a modal instead of relying on displayName convention.
 * Find a way to include unobtrusive default styling.
 * The library is only tailored to 'dumb' text modals with no actions; it should be extended to handle action modals.
 * The library theoretically supports multiple stacked modals, but I haven't really tested this use case. They probably look bad.

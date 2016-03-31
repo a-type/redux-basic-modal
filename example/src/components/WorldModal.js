@@ -11,4 +11,4 @@ class WorldModal extends Component {
     }
 }
 
-export default connectModal(WorldModal);
+export default connectModal(WorldModal, 'WorldModal');

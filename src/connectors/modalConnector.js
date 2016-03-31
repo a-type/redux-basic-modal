@@ -1,19 +1,19 @@
 import { connect } from 'react-redux';
 import { showModal, hideModal } from '../actions';
 
-export const connectModal = Modal => {
+export const connectModal = (Modal, modalName) => {
       const mapStateToProps = state => {
-          return state.modal[Modal.displayName];
+          return state.modal[modalName];
       }
 
       const mapDispatchToProps = dispatch => {
           return {
               handleShow() {
-                  dispatch(showModal(Modal.displayName));
+                  dispatch(showModal(modalName));
               },
 
               handleHide() {
-                  dispatch(hideModal(Modal.displayName));
+                  dispatch(hideModal(modalName));
               }
           };
       }
@@ -23,7 +23,7 @@ export const connectModal = Modal => {
           mapDispatchToProps
       )(Modal);
 
-      ConnectedModal.modalName = Modal.displayName;
+      ConnectedModal.modalName = modalName;
 
       return ConnectedModal;
 };

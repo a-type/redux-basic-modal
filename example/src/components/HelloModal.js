@@ -11,4 +11,4 @@ class HelloModal extends Component {
     }
 }
 
-export default connectModal(HelloModal);
+export default connectModal(HelloModal, 'HelloModal');
