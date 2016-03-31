@@ -75,6 +75,10 @@ dispatch(hideModal('HelloModal'));
 
 You don't need to manage show/hide state yourself. `Modals` will handle this for you, only rendering shown modals.
 
+## Example
+
+Run the example by running `node example/devServer.js`, then navigating to `localhost:3000/example/index.html` (I need to figure out the right way to configure webpack to serve that at root).
+
 ## API
 
 The module exposes the following:
