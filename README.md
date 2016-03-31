@@ -127,6 +127,7 @@ A basic connected component which can wrap any element to show a modal on click.
 ## Next steps
 
 * Testing!
+* Expose modules besides ES6... I'm new to publishing ES6 projects on NPM.
 * Allow passing arbitrary properties into a modal's state, then pass those properties to the modal component.
 * Allow defining a custom name for a modal instead of relying on displayName convention.
 * Find a way to include unobtrusive default styling.
