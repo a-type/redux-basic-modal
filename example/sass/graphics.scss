@@ -1,0 +1,25 @@
+@mixin graphic-x($size: 24px, $color: white) {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        height: $size;
+        width: 1px;
+        border-right: 1px solid $color;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        height: $size;
+        width: 1px;
+        border-right: 1px solid $color;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(135deg);
+    }
+}

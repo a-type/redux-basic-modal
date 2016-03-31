@@ -1,0 +1,50 @@
+{
+  "name": "redux-basic-modal",
+  "version": "0.1.0",
+  "description": "A simple React Redux modal implementation",
+  "main": "src/index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node example/devServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-type/redux-basic-modal.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "modal"
+  ],
+  "author": "a-type@outlook.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-type/redux-basic-modal/issues"
+  },
+  "homepage": "https://github.com/a-type/redux-basic-modal#readme",
+  "dependencies": {
+    "react": "^0.14.8",
+    "react-redux": "^4.4.1",
+    "redux": "^3.3.1"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-object-rest-spread": "^6.6.5",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "css-loader": "^0.23.1",
+    "express": "^4.13.4",
+    "node-sass": "^3.4.2",
+    "react-dom": "^0.14.8",
+    "react-hot-loader": "^1.3.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

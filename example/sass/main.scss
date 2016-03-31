@@ -1,0 +1,63 @@
+@import './graphics';
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparentize(black, 0.5);
+    display: flex;
+}
+
+.modal {
+    max-width: 600px;
+    min-width: 400px;
+    min-height: 200px;
+    margin: auto;
+    background: white;
+    padding: 16px;
+    position: relative;
+
+    .modal-close {
+        position: absolute;
+        top: -16px;
+        right: 16px;
+        background: dodgerblue;
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        cursor: pointer;
+
+        .button-content {
+            color: transparent;
+            @include graphic-x;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.app-content {
+    display: flex;
+}
+
+.show-modal {
+    cursor: pointer;
+    background: dodgerblue;
+    padding: 8px;
+    border-radius: 4px;
+    width: auto;
+}
